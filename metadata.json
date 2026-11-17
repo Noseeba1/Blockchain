@@ -1,0 +1,6 @@
+{
+  "name": "BLOCKCHAIN ARENA",
+  "description": "Discover Blockchain. Play. Learn. Win. — مسابقة تفاعلية جامعية لتعلّم أساسيات تقنية Blockchain.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

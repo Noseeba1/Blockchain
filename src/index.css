@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Cairo', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+    --font-body: 'IBM Plex Sans Arabic', 'Cairo', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+    background-color: #060A16;
+    color: #F1F5F9;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tech {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Subtle network grid background pattern */
+.arena-grid-bg {
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(99, 102, 241, 0.16) 0%, transparent 44%),
+    radial-gradient(circle at 82% 16%, rgba(6, 182, 212, 0.14) 0%, transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(37, 99, 235, 0.08) 0%, transparent 45%),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.25), rgba(6, 10, 22, 0.96)),
+    linear-gradient(to right, rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* Refined dark surface card elevation */
+.arena-surface {
+  background: linear-gradient(180deg, rgba(16, 25, 48, 0.92) 0%, rgba(10, 16, 33, 0.96) 100%);
+  box-shadow:
+    inset 0 1px 0 0 rgba(148, 163, 184, 0.08),
+    0 12px 32px -12px rgba(2, 6, 23, 0.65);
+}
+
+/* Flowing SVG conduit pulse */
+@keyframes svgDashFlow {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.svg-conduit-flow {
+  stroke-dasharray: 6 6;
+  animation: svgDashFlow 1.8s linear infinite;
+}
+
+/* Certificate print styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-certificate {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 2px solid #1e293b !important;
+    box-shadow: none !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+  .print-certificate * {
+    color: #0f172a !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
